@@ -22,16 +22,19 @@
 			<div class="circle" :style="styles"></div>
 			<div class="circle" :style="[styles, {'border-color': color}]"></div>
 			<hr>
-			<input type="text" v-model="color">
-			<input type="text" v-model="height">
+			<input type="text" v-model="color" placeholder="цвет">
+			<input type="text" v-model="height" placeholder="Ширина и высота">
+			<hr>
+			<br>
+			<hr>
 		</div>
 	</div>
 	<script>
 		var app = new Vue ({
 			el: '#app',
 			data: {
-				color: 'red',
-				height: 100
+				color: '',
+				height: ''
 			},
 			computed: {
 				styles: function() {
