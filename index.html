@@ -27,6 +27,13 @@
 			<hr>
 			<br>
 			<hr>
+			<h2 v-if="isVisible">
+				Текст Отображается
+			</h2>
+			<h2 v-else>
+				Текст Скрыт
+			</h2>
+			<button @click="isVisible = !isVisible">скрыть / отображать</button>
 		</div>
 	</div>
 	<script>
@@ -34,7 +41,8 @@
 			el: '#app',
 			data: {
 				color: '',
-				height: ''
+				height: '',
+				isVisible: true
 			},
 			computed: {
 				styles: function() {
