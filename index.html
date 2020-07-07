@@ -34,6 +34,17 @@
 				Текст Скрыт
 			</h2>
 			<button @click="isVisible = !isVisible">скрыть / отображать</button>
+			<hr>
+			<br>
+			<hr>
+			<h2 v-if="type === 'a'">A</h2>
+			<h2 v-else-if="type === 'b'">B</h2>
+			<h2 v-else-if="type === 'c'">C</h2>
+			<h2 v-else>Не найдено</h2>
+			<input type="text" v-model="type">
+			<hr>
+			<br>
+			<hr>
 		</div>
 	</div>
 	<script>
@@ -42,7 +53,8 @@
 			data: {
 				color: '',
 				height: '',
-				isVisible: true
+				isVisible: true,
+				type: 'a'
 			},
 			computed: {
 				styles: function() {
