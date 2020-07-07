@@ -45,6 +45,16 @@
 			<hr>
 			<br>
 			<hr>
+
+			<template v-if="activator">
+				<h2 style="color: blue">TITLE</h2>
+				<p style="color: blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, iste.</p>
+			</template>
+			<template v-else>
+				<h2 style="color: red">TITLE</h2>
+				<p style="color: red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, iste.</p>
+			</template>	
+			<button @click="activator = !activator">Change</button>
 		</div>
 	</div>
 	<script>
@@ -54,7 +64,8 @@
 				color: '',
 				height: '',
 				isVisible: true,
-				type: 'a'
+				type: 'a',
+				activator: true
 			},
 			computed: {
 				styles: function() {
